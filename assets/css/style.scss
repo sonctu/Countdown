@@ -1,0 +1,134 @@
+html {
+  box-sizing: border-box;
+  font-size: 62.5%;
+}
+* {
+  margin: 0;
+  padding: 0;
+}
+*,
+*:before,
+*:after {
+  box-sizing: border-box;
+}
+input,
+textarea,
+select,
+button {
+  outline: none;
+}
+input {
+  line-height: normal;
+}
+label,
+button {
+  cursor: pointer;
+  font-family: "Poppins", sans-serif;
+}
+ul li {
+  list-style: none;
+}
+a {
+  text-decoration: none;
+  font-family: "Poppins", sans-serif;
+}
+img {
+  display: block;
+  max-width: 100%;
+}
+body {
+  font-size: 16px;
+  line-height: 1;
+  position: relative;
+}
+
+.wrapper {
+  width: 100%;
+  height: 100vh;
+  background-image: url("../img/Minimalist-City-Wallpapers.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  position: relative;
+  transition: all 0.25s linear;
+}
+.countdown {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: white;
+  display: flex;
+  align-items: center;
+  gap: 0 30px;
+  transition: all 0.25s linear;
+  li {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 140px;
+    height: 140px;
+    border-radius: 50%;
+    border: 5px solid blue;
+    font-size: 2.2rem;
+    user-select: none;
+    .text {
+      text-transform: uppercase;
+      margin-bottom: 10px;
+      font-weight: 500;
+    }
+    .number {
+      font-size: 3.5rem;
+      font-weight: bold;
+    }
+  }
+}
+.container {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  transition: all 0.25s linear;
+  &-content {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+  p {
+    font-weight: bold;
+    font-size: 5rem;
+    text-transform: uppercase;
+    margin-top: 20px;
+    background: #ee0979;
+    background: linear-gradient(to right bottom, #ff00b3, #ee0909);
+    color: transparent;
+    background-clip: text;
+    -webkit-background-clip: text;
+    transform: scale(0);
+    transition: all 1s linear;
+  }
+  video {
+    width: 300px;
+    height: 500px;
+    display: inline-block;
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+  img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+}
+.hidden {
+  opacity: 0;
+  visibility: hidden;
+}
