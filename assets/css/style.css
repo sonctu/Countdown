@@ -124,6 +124,7 @@ body {
   background-clip: text;
   -webkit-background-clip: text;
   transform: scale(0);
+  text-align: center;
   transition: all 1s linear;
 }
 .container video {
