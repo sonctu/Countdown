@@ -113,6 +113,7 @@ body {
     -webkit-background-clip: text;
     transform: scale(0);
     text-align: center;
+    user-select: none;
     transition: all 1s linear;
   }
   video {

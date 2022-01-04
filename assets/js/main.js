@@ -6,7 +6,8 @@ window.addEventListener("load", function() {
     const wrapper = document.querySelector(".wrapper");
     const container = document.querySelector(".container");
     const video = document.querySelector("video");
-
+    const currentYear = new Date().getFullYear();
+    const containerContent = document.querySelector(".container-content");
     function countdown(date) {
         let days, hours, minutes, seconds;
         const endDate = new Date(date).getTime();
@@ -25,9 +26,6 @@ window.addEventListener("load", function() {
                 minutesText.textContent = `${minutes < 10 ? "0" + minutes : minutes}`;
                 seconds = Math.floor(timeRemaining);
                 secondsText.textContent = `${seconds < 10 ? "0" + seconds : seconds}`;
-                // container.classList.add("hidden");
-                // wrapper.classList.remove("hidden");
-                // video.pause();
                 if(seconds <= 30 && days === 0 && hours === 0 && minutes === 0) {
                     document.querySelector("audio").play();
                 }
@@ -41,6 +39,7 @@ window.addEventListener("load", function() {
             }
         },1000)
     }
-    countdown(`Jan 1 2022 00:00:00`);
+    containerContent.querySelector("p").textContent = `Happy new year ${currentYear + 1}`;
+    countdown(`Jan 1 ${currentYear + 1} 00:00:00`);
 
 })
